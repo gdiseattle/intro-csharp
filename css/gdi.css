@@ -14,8 +14,10 @@
 	margin-bottom: 1em;
 }
 
-.reveal section img {
+.reveal section.title-page img {
 	border: 0;
+	width: 50%;
+	margin-bottom: 75px;
 }
 
 .reveal p {
@@ -31,18 +33,18 @@
  * ***************/
 
 .individually {
-	color: #F05B62;
+	color: #BF4E49;
 }
 
 .reveal footer{
-	color: #c9c2ae;
+	color: #86A89F;
 	position: fixed;
 	height: 40px;
 	width: 100%;
-	bottom: 3px;
+	bottom: 12px;
 	padding: 0 5px;
 	left: 0;
-	z-index: 10;·
+	z-index: 10;
 	font-size: .8em;
 	text-align:right;
 	background-image: url(../images/watermark-logo-2.png);
@@ -62,11 +64,33 @@ span.footer-title {
 }
 
 .reveal .controls {
-	bottom: 20px;
+	bottom: 38px;
 }
 
-.reveal h5.title-page {
-	color: #C9C2AE;
+.reveal section.title-page h5 {
+	color: #86A89F;
 	font-size: .6em;
 	padding-top: 25px;
+}
+
+.reveal section :not(h1,h2,h3,h4,h5) {
+	text-align:left !important;
+}
+
+.reveal section img.thumbnail {
+	width: 150px;
+	height: 150px;
+	background-size: cover;
+    background-position: top;
+}
+
+.reveal section img.thumbnail.paige-intro {
+	background-image: url(../images/paige_image.jpg);
+}
+
+.reveal section p.caption {
+	color: #EBAC9D;
+	font-weight:900;
+	font-size: 24px;
+	margin:0;
 }
