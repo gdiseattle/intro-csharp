@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>GDI Introduction to Java and OOP Concepts</title>
+	<title>GDI Introduction to C# and OOP Concepts</title>
 
-	<meta name="description" content="Intro to Object Oriented Programming with Java curriculum was developed by Ashley Price for Girl Develop It.   The course is meant to be taught in 2 4-hour sections.  The slides are customizable according to the needs of a given class or audience.">
+	<meta name="description" content="Intro to Object Oriented Programming with C# curriculum was developed by Ashley Price for Girl Develop It.   The course is meant to be taught in 2 4-hour sections.  The slides are customizable according to the needs of a given class or audience.">
 	<meta name="author" content="Ashley Price">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,12 +15,12 @@
 	<link rel="icon" href="images/favicon.ico">
 
 	<link rel="stylesheet" href="reveal/css/reveal.css">
-	<link rel="stylesheet" href="reveal/css/theme/serif.css" id="theme">
+	<link rel="stylesheet" href="reveal/css/theme/gdisunny.css" id="theme">
 
 	<link rel="stylesheet" href="css/gdi.css">
 
 	<!-- For syntax highlighting -->
-	<link rel="stylesheet" href="reveal/plugin/highlight/styles/zenburn.css">
+	<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
 	<!-- For the slides -->
 	<link rel="stylesheet" href="css/slides.css">
 	<!-- If use the PDF print sheet so students can print slides-->
@@ -39,67 +39,94 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<!-- Opening slide -->
-			<section>
-				<img src="images/gdi_logo_badge.png" alt="" />
-				<h3>Intro to Java and OOP Concepts</h3>
+			<section class='title-page'>
+				<img src="images/watermark-logo-2.png" alt="" />
+				<h3>Intro to C# and OOP Concepts</h3>
 				<h4>Class 1</h4>
-				<h5 class='title-page'>Developed for GDI by Ashley Price</h5>
+				<h5>Developed for GDI by Paige Bystrom and Ashley Price</h5>
 			</section>
 
 			<!-- Welcome-->
 			<section>
-				<section>
-					<h3>Welcome!</h3>
-						<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-				</section>
-				<section>
-					<h3>Some "Rules"</h3>
-					<ul>
-						<li>We are here for you!</li>
-						<li>Every question is important</li>
-						<li>Help each other</li>
-						<li>Be Respectful</li>
-						<li>Have fun!</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Introductions</h3>
-					<ul>
-						<li>Who are you?</li>
-						<li>What spurred you into learning about development?</li>
-						<li>What do you hope to get out of the class?</li>
-					</ul>
-				</section>
+				<h3>Welcome!</h3>
+				<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+
+				<h3>Some "Rules"</h3>
+				<ul>
+					<li>We are here for you!</li>
+					<li>Every question is important</li>
+					<li>Help each other</li>
+					<li>Be Respectful</li>
+					<li>Have fun!</li>
+				</ul>
+			</section>
+
+			<!-- Introductions -->
+			<section>
+				<h3>Who are we?</h3>
+				<h4>Instructor:</h4>
+				<p>Paige Bystrom</p>
+				<img class="thumbnail paige-intro"/>
+				<p class="caption">@radmint</p>
+			</section>
+
+			<!-- Introductions -->
+			<section>
+				<h3>Introductions</h3>
+				<ul>
+					<li>Who are you?</li>
+					<li>What spurred you into learning about development?</li>
+					<li>What do you hope to get out of the class?</li>
+				</ul>
+			</section>
+
+			<!-- Agenda -->
+			<section>
+				<h3>C# Language Fundamentals Agenda</h3>
+				<ul>
+					<li>Flow Control</li>
+					<li>Methods</li>
+					<li>Objects</li>
+					<li>Classes</li>
+					<li>Static</li>
+					<li>Inheritance and SubClasses</li>
+					<li>Writing Your Own C# Program</li>
+					<li>How Do I Keep Learning More C#?</li>
+				</ul>
 			</section>
 
 			<!-- Creating a new project -->
 			<section>
-				<section>
-						<h3>Creating a new Java Project</h3>
-						<ol>
-							<li>
-								In Eclipse, navigate to File > New > Java Project
-							</li>
-							<li>
-								Project Name: com.gdi.oop
-							</li>
-							<li>
-								We'll be keeping the defaults.  So, hit finish!
-							</li>
-						</ol>
-				</section>
-				<section>
-					<h3> Adding our First Class</h3>
-					<ol>
-						<li>File > New > Class</li>
-						<li>Name: HelloWorld <em>(make sure there are no spaces)</em></li>
-						<li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)"</li>
-						<li>Click finish</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Default Code</h3>
-					<pre><code class='java'>
+				<h3>Creating a new C# Project</h3>
+				<ol>
+					<li>
+						Open Visual Studio
+					</li>
+					<li>
+						Navigate to File
+					</li>
+					<li>
+						New Solution
+					</li>
+					<li>.NET Core > App > Console Application</li>
+				</ol>
+			</section>
+
+			<!-- Adding first class -->
+			<section>
+				<h3> Adding our First Class</h3>
+				<ol>
+					<li>File > New > Class</li>
+					<li>Name: HelloWorld <em>(make sure there are no spaces)</em></li>
+					<li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)"</li>
+					<li>Click finish</li>
+				</ol>
+			</section>
+
+			<!-- Default -->
+			<section>
+				<h3>Default Code</h3>
+				<pre><code class='csharp'>
 public class HelloWorld {
 	/**
 	 * @param args
@@ -108,9 +135,9 @@ public class HelloWorld {
 		//TODO Auto-generated method stub
 	}
 }
-					</code></pre>
-				</section>
+				</code></pre>
 			</section>
+
 			<section>
 				<section>
 					<aside class='notes'>
@@ -122,13 +149,13 @@ public class HelloWorld {
 					<h3>Writing our first line </h3>
 					<ol>
 						<li>Inside the main method type: 
-							<pre><code class='java'>System.out.println("Hello, World!");</code></pre></li>
+							<pre><code class='csharp'>System.out.println("Hello, World!");</code></pre></li>
 						<li>Hit the play button in your toolbar</li>
 					</ol>
 				</section>
 				<section>
 					<h3>The Code </h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 public class HelloWorld {
 	/**
 	 * @param args
@@ -145,11 +172,11 @@ public class HelloWorld {
 			<section>
 				<section>
 					<h3>Main Method</h3>
-					<p>In Java, every application contains a main method that acts as an entry point for the application</p>
+					<p>In C#, every application contains a main method that acts as an entry point for the application</p>
 				</section>
 				<section>
 					<h3>Comments</h3>
-					<p>Comments in Java let you write notes in the code.</p>
+					<p>Comments in C# let you write notes in the code.</p>
 					<p>Comments can be formatted in two ways: </p>
 					<ol>
 						<li>A single line that starts with //</li>
@@ -157,7 +184,7 @@ public class HelloWorld {
 					</ol>
 				</section>
 				<section>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 public class HelloWorld {
 	/**
 	 * @param args
@@ -184,7 +211,7 @@ public class HelloWorld {
 				<section>
 					<h3>Variables</h3>
 					<p>What are variables?</p>
-					<p>Java is a statically typed language</p>
+					<p>C# is a statically typed language</p>
 					<p>You must declare all variables before you use them.  The declaration must include the variable type and the variable name.</p>
 				</section>
 				<section>
@@ -220,7 +247,7 @@ public class HelloWorld {
 					</aside>
 					<h3>Code It: Creating Variables</h3>
 					<p>Declare a variable with the following format: </p>
-					<pre><code class='java'>type name;</code></pre>
+					<pre><code class='csharp'>type name;</code></pre>
 					<p>We're going to create the following three variables: </p>
 					<ul>
 						<li>int numberPassengers</li>
@@ -230,7 +257,7 @@ public class HelloWorld {
 				</section>
 				<section>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hello World!");
@@ -268,9 +295,9 @@ public class HelloWorld {
 					</aside>
 					<h3>Assignment Operators</h3>
 					<p>To assign a value to a variable we use the assignment operator: </p>
-					<pre><code class='java'>=</code></pre>
+					<pre><code class='csharp'>=</code></pre>
 					<p>Let's try it out: </p>
-					<pre><code class='java'>numberPassgeners = 1;</code></pre>
+					<pre><code class='csharp'>numberPassgeners = 1;</code></pre>
 				</section>
 				<section>
 					<aside class='notes'>
@@ -290,7 +317,7 @@ public class HelloWorld {
 				</section>
 				<section>
 					<p>You can initialize your variables when you declare them: </p>
-					<pre><code class='java'>int maxNumberPassengers = 2</code></pre>
+					<pre><code class='csharp'>int maxNumberPassengers = 2</code></pre>
 				</section>
 				<section>
 					<aside class='notes'>
@@ -313,7 +340,7 @@ public class HelloWorld {
 				</section>
 				<section>
 					<h3>The Code: </h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 public static void main(String[] args) {
 	//TODO Auto-generated method stub
 	System.out.println("Hello, World");
@@ -333,7 +360,7 @@ public static void main(String[] args) {
 					</aside>
 					<h3>Arithmetic Operators</h3>
 					<p>Just like in math class, we can have arithmetic operators in programming:</p>
-					<pre><code class='java'>+, -, *, /</code></pre>
+					<pre><code class='csharp'>+, -, *, /</code></pre>
 					<p>Add, subtract, multiply and divide</p>
 				</section>
 				<section>
@@ -346,7 +373,7 @@ public static void main(String[] args) {
 						<strong>maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!</strong><br>
 					</aside>
 					<h3>Code It!</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
 					</code></pre>
 				</section>
@@ -366,7 +393,7 @@ maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
 					<ul>
 						<li>Increment the numberPassengers value by one</li>
 						<li>Then use the System.out.println method to show the result:
-							<pre><code class='java'>
+							<pre><code class='csharp'>
 System.out.println("Number of Passengers: " + numberPassengers);
 							</code></pre>
 						</li>
@@ -374,12 +401,12 @@ System.out.println("Number of Passengers: " + numberPassengers);
 				</section>
 				<section>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 numberPassengers = numberPassengers + 1;
 System.out.println("Number of Passengers: " + numberPassengers);
 </code></pre>
 					<p>You can write this in shorthand using the ++ operator: </p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 numberPassengers++;
 					</code></pre>
 					<p>Output: </p>
@@ -425,7 +452,7 @@ Current Speed: 30
 				</section>
 				<section>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 int currentSpeed = 0;
 currentSpeed = currentSpeed + 20;
 System.out.println("Current Speed: "+currentSpeed);
@@ -463,7 +490,7 @@ System.out.println("Current Speed: "+currentSpeed);
 				</section>
 				<section>
 					<h3>Code it!</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 isFull = (numberPassengers == maxNumberPassengers);
 System.out.println("The car is Full: " + isFull);
 					</code></pre>
@@ -493,7 +520,7 @@ The car is full: false
 				</section>
 				<section>
 					<h3>Example Answer</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 isFull = numberPassengers &lt; maxNumberPassengers;
 System.out.println("We have less than the number of Max Passengers: "
 	+ isFull);
@@ -524,7 +551,7 @@ I'm full and/or overbooked! false
 						</tr>
 					</table>
 					<p>We can check if two (x and y) values are true</p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 positiveNumbers = x>0 &amp;&amp; y>0;
 					</code></pre>
 				</section>
@@ -534,7 +561,7 @@ positiveNumbers = x>0 &amp;&amp; y>0;
 						Mention Short Circuiting? If class is doing well with concepts.
 					</aside>
 					<h3>Code It!</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
 System.out.println("I'm only endangering myself " + dangerToSelfOnly);
 					</code></pre>
@@ -549,7 +576,7 @@ System.out.println("I'm only endangering myself " + dangerToSelfOnly);
 				<section>
 					<h3>Precedence</h3>
 					<p>Our previous example: </p>
-					<pre><code class='java'>positiveNumbers = x>0 &amp;&amp; y>0;</code></pre>
+					<pre><code class='csharp'>positiveNumbers = x>0 &amp;&amp; y>0;</code></pre>
 					<p>According to the precedence chart evaluates:</p>
 					<table>
 						<tr>
@@ -568,7 +595,7 @@ System.out.println("I'm only endangering myself " + dangerToSelfOnly);
 				<h3>Expressions</h3>
 				<p>An expression is a piece of code that evaluates to a value.</p>
 				<p>Example:</p>
-				<pre><code class='java'>
+				<pre><code class='csharp'>
 numberPassengers &lt; maxNumberPassengers
 				</code></pre>
 				<p>This expression could be true or false depending on the values of the varaibles, but it is not a complete statement of execution</p>
@@ -578,9 +605,9 @@ numberPassengers &lt; maxNumberPassengers
 					There is no semi-colon and the expression on the previous page returns a value but nothing happens.
 				</aside>
 				<h3>Statement</h3>
-				<p>A statement is a complete unit of execution.  It's a sentence in the Java Language.  An instruction that can be carried out from start to end.</p>
+				<p>A statement is a complete unit of execution.  It's a sentence in the C# Language.  An instruction that can be carried out from start to end.</p>
 				<p>Let's take a look at one of the statements we've written:</p>
-				<pre><code class='java'>
+				<pre><code class='csharp'>
 boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
 				</code></pre>
 			</section>
@@ -598,7 +625,7 @@ boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
 				<section>
 					<h3>If/Else</h3>
 					<p>The If/Else statement allows us to make a choice</p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 if (x &lt; 5) {
 	System.out.println("Yay!");
 } else {
@@ -624,7 +651,7 @@ if (x &lt; 5) {
 				</section>
 				<section>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 if (numberPassengers &lt; maxNumberPassengers) {
 	System.out.println("Would you like a lift?");
 } else {
@@ -647,7 +674,7 @@ Would you like a lift?
 					</aside>
 					<h3>else if</h3>
 					<p>You also have an else if statement at your disposal:</p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 if (x &lt; 5) {
 	System.out.println("too small");
 } else if ( x == 5) {
@@ -674,7 +701,7 @@ if (x &lt; 5) {
 				</section>
 				<section>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 if (numberPassengers &lt; maxNumberPassengers) {
 	System.out.println("Would you like a lift?");
 } else if (numberPassengers == maxNumberPassengers-1) {
@@ -693,7 +720,7 @@ if (numberPassengers &lt; maxNumberPassengers) {
 				</section>
 				<section>
 					<h3>Switch Statement Example</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 switch (holiday) {
 	case "new years":
 		System.out.println("Happy New Year!");
@@ -745,7 +772,7 @@ switch (holiday) {
 					<h3>Code it!</h3>
 					<p><span class='individually'>On your own,</span> add a break statement to all of the cases</p>
 					<p>Example:</p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 case 1: System.out.println("I love driving by myself");
 	break;
 					</code></pre>
@@ -768,7 +795,7 @@ case 1: System.out.println("I love driving by myself");
 						it cannot fall through
 					</aside>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 switch (numberPassengers) {
 	case 1: 
 		System.out.println("I love driving by myself");
@@ -798,7 +825,7 @@ switch (numberPassengers) {
 					<h3>For Loop</h3>
 					<p>In cases where we know how many times we wish to execute the loop, we can use a <em>for loop</em></p>
 					<p>The for loop structure calls for a variable initialized to a value, the termination condition, and the increment</p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 for (initial variable; test condition; increment) { }
 					</code></pre>
 				</section>
@@ -809,7 +836,7 @@ for (initial variable; test condition; increment) { }
 						}
 					</aside>
 					<h3>Code it!</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 for (int mySpeed = 0; mySpeed &lt; 55; mySpeed +=10) {
 	System.out.println("I'm going " + mySpeed + "mph!");
 }
@@ -832,7 +859,7 @@ I'm going 50 mph!
 					<h3>While Loop</h3>
 					<p>At other times, we want to execute oru code for an unknown number of iterations</p>
 					<p>It simply needs to be executed until some condition is true regardless of how many iterations it takes.</p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 while (condition) {
 	...
 }
@@ -857,7 +884,7 @@ while (condition) {
 				</section>
 				<section>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 isFull = numberPassengers == maxNumberPassengers;
 while (!isFull) {
 	/* We'll add a passenger */
@@ -902,7 +929,7 @@ while (!isFull) {
 				</section>
 				<section>
 					<h3>Syntax - Creating an Array</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 String[] garage = new String[3];
 garage[0] = "Chevy";
 garage[1] = "Ford";
@@ -927,7 +954,7 @@ garage[2] = "Pontiac";
 						Highlight  Making use of .length state/property
 					</aside>
 					<h3>Arrays and For loops are BFFs</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 for (int i=0; i&lt;garage.length; i++) {
 	System.out.println("Garage Slot " + i + "holds " + garage[i]);
 }
@@ -939,7 +966,7 @@ for (int i=0; i&lt;garage.length; i++) {
 				<p>We created an Array of Strings</p>
 				<p><a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html">Strings</a> are a type of Object</p>
 				<p>We can create a single String object by declaring a variable of type String and assigning it a new String object with some value</p>
-				<pre><code class='java'>
+				<pre><code class='csharp'>
 String dreamCar = new String("Corvette");
 				</code></pre>
 			</section>
@@ -960,7 +987,7 @@ String dreamCar = new String("Corvette");
 				</section>
 				<section>
 					<h3>An example in Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 String dreamCar = new String("Corvette");
 System.out.println("Length: " + dreamCar.length());
 System.out.println("Does the word contain 'vette'?" +
@@ -977,7 +1004,7 @@ System.out.println("It's all lower " + dreamCar.toLowerCase());
 				</section>
 				<section>
 					<h3>The Code</h3>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 System.out.println("It's all upper " + dreamCar.toUpperCase());
 					</code></pre>
 				</section>
@@ -995,7 +1022,7 @@ System.out.println("It's all upper " + dreamCar.toUpperCase());
 				<section>
 					<h3>Methods Parameters</h3>
 					<p>Parameters- A list of values the methods expects as input when you call on it</p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 .contains("vette");
 					</code></pre>
 				</section>
@@ -1019,18 +1046,18 @@ System.out.println("It's all upper " + dreamCar.toUpperCase());
 				<section>
 					<h3>Let's create some Number Objects</h3>
 					<p>We can create a Double by passing it a primitive double value: </p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 Double mpg = new Double(30.5);
 					</code></pre>
 					<p>We can also create a Double by passing it a String: </p>
-					<pre><code class='java'>
+					<pre><code class='csharp'>
 Double mpg = new Double("49.1");
 					</code></pre>
 				</section>
 			</section>
 			<section>
 				<aside class='notes'>
-					Take a look at the constructor summary in the Java Docs
+					Take a look at the constructor summary in the C# Docs
 				</aside>
 				<h3>Constructors</h3>
 				<p>When we create an objects, its data members have an initial value</p>
@@ -1050,7 +1077,7 @@ Double mpg = new Double("49.1");
 			</section>
 		</div> <!-- end slides -->
 		<footer>
-			<span class='footer-title'>Intro to OOP with Java</span>
+			<span class='footer-title'>Intro to OOP with C#</span>
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 		</footer>
 	</div> <!-- end reveal -->
