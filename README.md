@@ -8,15 +8,20 @@ A 4-day course intended to be taught in 2-hour classes.
 
 Part 1 covers Language Fundamentals:
 
-* Primitive Data Types (Variables)
+* Creating a new C# Solution
+* Variables
 * Operators
-* Expressions & Statements
-* Flow Control (Blocks)
-* Exceptions
+* Expressions
+* Statements
+* Flow Control
+* Objects
+* Methods
+* Constructors
+* Null
 
 Part 2 covers Object-Oriented Concepts:
 
-* Objects and Classes
+* Objects (cont.) and Classes
 * Defining Fields and Methods
 * Data Encapsulation
 * Subclasses and Inheritance
