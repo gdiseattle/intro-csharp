@@ -6,7 +6,9 @@
 
 	<title>GDI Introduction to C# and OOP Concepts</title>
 
-	<meta name="description" content="Intro to Object Oriented Programming with C# curriculum was developed by Ashley Price for Girl Develop It.   The course is meant to be taught in 2 4-hour sections.  The slides are customizable according to the needs of a given class or audience.">
+	<meta name="description" content="Intro to Object Oriented Programming with C# curriculum was 
+	developed by Paige Bystrom for Girl Develop It. The course is meant to be taught in 4 2-hour sections.
+	  The slides are customizable according to the needs of a given class or audience.">
 	<meta name="author" content="Ashley Price">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,9 +35,7 @@
 </head>
 
 <body>
-
 	<div class="reveal">
-
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<!-- Opening slide -->
@@ -49,7 +49,8 @@
 			<!-- Welcome-->
 			<section>
 				<h3>Welcome!</h3>
-				<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+				<p>Girl Develop It is here to provide affordable and accessible programs to learn software 
+					through mentorship and hands-on instruction.</p>
 
 				<h3>Some "Rules"</h3>
 				<ul>
@@ -61,27 +62,86 @@
 				</ul>
 			</section>
 
-			<!-- Introductions -->
+			<!-- Introductions: Instructor & TAs -->
 			<section>
 				<h3>Who are we?</h3>
-				<h4>Instructor:</h4>
-				<p>Paige Bystrom</p>
-				<img class="thumbnail paige-intro"/>
-				<p class="caption">@radmint</p>
+				<div class="bio-card bio-card-3">
+					<h4>Instructor:</h4>
+					<p>Paige Bystrom</p>
+					<img class="thumbnail paige-intro"/>
+					<a href="https://twitter.com/radmint/" class="caption">@radmint</a>
+				</div>
+				<div class="bio-card bio-card-3">
+					<h4>TA:</h4>
+					<p>Name</p>
+					<img class="thumbnail"/>
+					<a class="caption">@twitter-handle</a>
+				</div>
+				<div class="bio-card bio-card-3">
+					<h4>TA:</h4>
+					<p>Name</p>
+					<img class="thumbnail"/>
+					<a class="caption">@twitter-handle</a>
+				</div>
 			</section>
 
-			<!-- Introductions -->
+			<!-- Course Agenda: Class 1 -->
+			<section>
+				<h3>Course agenda</h3>
+				<h4>Class 1:</h4>
+				<ul>
+					<li>Creating a new C# Solution</li>
+					<li>Variables</li>
+					<li>Operators</li>
+					<li>Expressions</li>
+					<li>Statements</li>
+					<li>Flow Control</li>
+					<li>Objects</li>
+					<li>Methods</li>
+					<li>Constructors</li>
+				</ul>
+			</section>
+
+			<!-- Course Agenda: Class 2 -->
+			<section>
+				<h3>Course agenda</h3>
+				<h4>Class 2:</h4>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+
+			<!-- Course Agenda: Class 3 -->
+			<section>
+				<h3>Course agenda</h3>
+				<h4>Class 3:</h4>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+
+			<!-- Course Agenda: Class 4 -->
+			<section>
+					<h3>Course agenda</h3>
+					<h4>Class 4:</h4>
+					<ul>
+						<li></li>
+					</ul>
+			</section>
+
+			<!-- Introductions: Attendees -->
 			<section>
 				<h3>Introductions</h3>
 				<ul>
 					<li>Who are you?</li>
 					<li>What spurred you into learning about development?</li>
 					<li>What do you hope to get out of the class?</li>
+					<li>What's your favorite pasttime?</li>
 				</ul>
 			</section>
 
 			<!-- Agenda -->
-			<section>
+			<!-- <section>
 				<h3>C# Language Fundamentals Agenda</h3>
 				<ul>
 					<li>Flow Control</li>
@@ -93,7 +153,7 @@
 					<li>Writing Your Own C# Program</li>
 					<li>How Do I Keep Learning More C#?</li>
 				</ul>
-			</section>
+			</section> -->
 
 			<!-- Creating a new project -->
 			<section>
@@ -112,973 +172,825 @@
 				</ol>
 			</section>
 
-			<!-- Adding first class -->
+			<!-- Default Main method -->
 			<section>
-				<h3> Adding our First Class</h3>
-				<ol>
-					<li>File > New > Class</li>
-					<li>Name: HelloWorld <em>(make sure there are no spaces)</em></li>
-					<li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)"</li>
-					<li>Click finish</li>
-				</ol>
-			</section>
-
-			<!-- Default -->
-			<section>
-				<h3>Default Code</h3>
-				<pre><code class='csharp'>
-public class HelloWorld {
-	/**
-	 * @param args
-	*/
-	public static void main(String[] args) {
-		//TODO Auto-generated method stub
+				<h3>Default Main Method</h3>
+				<p>In C#, every application contains a main method that acts as an entry point for the 
+					application</p>
+				<pre><code class="java">
+using System;
+namespace Pizzeria
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");
+		}
 	}
 }
 				</code></pre>
 			</section>
 
+			<!-- Default Main method cont. -->
 			<section>
-				<section>
-					<aside class='notes'>
-						public static void main(String[] args) {<br>
-							// TODO Auto-generated method stub<br>
-							<strong>System.out.println("Hello, World!");</strong><br>
-						}
-					</aside>
-					<h3>Writing our first line </h3>
-					<ol>
-						<li>Inside the main method type: 
-							<pre><code class='csharp'>System.out.println("Hello, World!");</code></pre></li>
-						<li>Hit the play button in your toolbar</li>
-					</ol>
-				</section>
-				<section>
-					<h3>The Code </h3>
-					<pre><code class='csharp'>
-public class HelloWorld {
-	/**
-	 * @param args
-	*/
-	public static void main(String[] args) {
-		//TODO Auto-generated method stub
-		System.out.println("Hello, World!");
+				<h3>Default Main Method (cont.)</h3>
+				<pre><code class="java">
+using System;
+namespace Pizzeria
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");
+		}
 	}
 }
-					</code></pre>
-				</section>
+				</code></pre>
+				<ol class="question-list">
+					<li>What happens if we remove the <code>using System;</code> statement?</li>
+					<li>What happens if we change the name of the class <code>Program</code>?</li>
+					<li>What happens if we change the name of the <code>Main()</code> method?</li>
+					<li>What happens if we remove the <code>string[] args</code> argument?</li>
+				</ol>
 			</section>
-			<!-- Break it Down and look at the example -->
+
+			<!-- Variables -->
 			<section>
-				<section>
-					<h3>Main Method</h3>
-					<p>In C#, every application contains a main method that acts as an entry point for the application</p>
-				</section>
-				<section>
-					<h3>Comments</h3>
-					<p>Comments in C# let you write notes in the code.</p>
-					<p>Comments can be formatted in two ways: </p>
-					<ol>
-						<li>A single line that starts with //</li>
-						<li>One or more lines between /* and */</li>
-					</ol>
-				</section>
-				<section>
-					<pre><code class='csharp'>
-public class HelloWorld {
-	/**
-	 * @param args
-	*/
-	public static void main(String[] args) {
-		//TODO Auto-generated method stub
-		System.out.println("Hello, World!");
-	}
-}
-					</code></pre>
-				</section>
+				<h3>Variables</h3>
+				<p>What are variables?</p>
+				<p>C# is a statically typed language with type inference</p>
+				<p>You must declare all variables before you use them.  The declaration must include the 
+					variable type and the variable name.</p>
 			</section>
+
+			<!-- Primitive Variables -->
 			<section>
-				<h3>Part 1: Language Fundamentals</h3>
+				<h3>Primitive Variables</h3>
+				<p>A primitive variable is the most basic type of value in a language.</p>
+				<p>Primitive types we'll be looking at include: </p>
 				<ul>
-					<li>Primitive Data Types (Variables)</li>
-					<li>Operators</li>
-					<li>Expressions &amp; Statements</li>
-					<li>Flow Control (Blocks)</li>
-					<li>Exceptions</li>
+					<li><code>int</code></li>
+					<li><code>double</code></li>
+					<li><code>bool</code></li>
 				</ul>
 			</section>
-			<section>
-				<section>
-					<h3>Variables</h3>
-					<p>What are variables?</p>
-					<p>C# is a statically typed language</p>
-					<p>You must declare all variables before you use them.  The declaration must include the variable type and the variable name.</p>
-				</section>
-				<section>
-					<h3>Statically Typed Variables Illustrated</h3>
-					<p>You can think of variables as little boxes that hold a value</p>
-					<p>In strongly typed langauges, variables only hold the "kind of value" they were declared to: </p>
-					<img src="images/variables_illustrated.png">
-				</section>
-				<section>
-					<aside class='notes'>
-						There are 8 total, but these are three we care about at the moment
-					</aside>
-					<h3>Primitive Variables</h3>
-					<p>A primitive variable is the most basic type of value in a language.</p>
-					<p>Primitive types we'll be looking at include: </p>
-					<ul>
-						<li>int</li>
-						<li>double</li>
-						<li>boolean</li>
-					</ul>
-				</section>
-				<section>
-					<aside class='notes'>
-						public static void main(String[] args) {<br>
-							// TODO Auto-generated method stub<br>
-							System.out.println("Hello World");<br>
-							<strong>
-								int numberPassengers;<br>
-								int maxNumberPassengers;<br>
-								boolean isFull;<br>
-							</strong>
-						}
-					</aside>
-					<h3>Code It: Creating Variables</h3>
-					<p>Declare a variable with the following format: </p>
-					<pre><code class='csharp'>type name;</code></pre>
-					<p>We're going to create the following three variables: </p>
-					<ul>
-						<li>int numberPassengers</li>
-						<li>int maxNumberPassengers</li>
-						<li>boolean isFull</li>
-					</ul>
-				</section>
-				<section>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("Hello World!");
-		int numberPassengers;
-		int maxNumberPassengers;
-		boolean isFull;
-	}
-					</code></pre>
-				 </section>
-			</section>
-			<section>
-				<section>
-					<h3>Operators</h3>
-					<ul>
-						<li>Assignment</li>
-						<li>Arithmetic</li>
-						<li>Equality and Relationship</li>
-						<li>Conditional</li>
-						<li>Precedence</li>
-					</ul>
-				</section>
-			</section>
-			<section>
-				<section>
-					<aside class='notes'>
-						public static void main(String[] args) {<br>
-							// TODO Auto-generated method stub<br>
-							System.out.println("Hello World");<br>
-							int numberPassengers;<br>
-							int maxNumberPassengers;<br>
-							boolean isFull;<br>
-							<strong>numberPassengers=1;</strong><br>
-						}<br>
-						"Variable Name" "Operator" "Value"
-					</aside>
-					<h3>Assignment Operators</h3>
-					<p>To assign a value to a variable we use the assignment operator: </p>
-					<pre><code class='csharp'>=</code></pre>
-					<p>Let's try it out: </p>
-					<pre><code class='csharp'>numberPassgeners = 1;</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						public static void main(String[] args) {<br>
-							// TODO Auto-generated method stub<br>
-							System.out.println("Hello, World!");<br>
-							int numberPassengers;<br>
-							<strong>int maxNumberPassengers=2;</strong><br>
-							boolean isFull;<br>
-							numberPassengers=1;<br>
-						}
-					</aside>
-					<h3>Initialization</h3>
-					<p>We just <em>initialized</em> numberPassgeners</p>
-					<p>Initilization is the first (initial) assignment of a value to a variable</p>
-					<p>You should always initialize your variables before using them in your program</p>
-				</section>
-				<section>
-					<p>You can initialize your variables when you declare them: </p>
-					<pre><code class='csharp'>int maxNumberPassengers = 2</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						public static void main(String[] args) {<br>
-							// TODO Auto-generated method stub<br>
-							System.out.println("Hello World");<br>
-							int numberPassengers;<br>
-							int maxNumberPassengers=2;<br>
-							<strong>boolean isFull=false;</strong><br>
-							numberPassengers=1;<br>
-						}
-					</aside>
-					<h3>Code it!</h3>
-					<p>Boolean variables have two values:</p>
-					<ul>
-						<li>true</li>
-						<li>false</li>
-					</ul>
-					<p><span class='individually'>On your own,</span> initialize the variable <em>isFull</em> with the value <em>false</em></p>
-				</section>
-				<section>
-					<h3>The Code: </h3>
-					<pre><code class='csharp'>
-public static void main(String[] args) {
-	//TODO Auto-generated method stub
-	System.out.println("Hello, World");
 
-	int numberPassengers;
-	int maxNumberPassgeners = 2;
-	boolean isFull = false;
-	numberPassgeners = 1;
+			<!-- Creating Variables: Develop it -->
+			<section>
+				<h3>Develop It: Creating Variables</h3>
+				<p>Declare a variable with the following format: </p>
+				<pre><code class='java'>type name;</code></pre>
+				<p>We're going to create the following variables: </p>
+				<ul>
+					<li><code>int numberOfPizzas</code></li>
+					<li><code>int maxNumberOfPizzas</code></li>
+					<li><code>bool isOrderFull</code></li>
+					<li><code>double orderCost</code></li>
+				</ul>
+			</section>
+
+			<!-- Creating Variables: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+static void Main(string[] args)
+{
+	Console.WriteLine("Hello World!");
+	int numberOfPizzas;
+	int maxNumberOfPizzas;
+	bool isOrderFull;
+	double orderCost;
 }
-					</code></pre>
-				</section>
+				</code></pre>
 			</section>
-			<section>
-				<section>
-					<aside class='notes'>
-						Dropping % don't need that with beginners.
-					</aside>
-					<h3>Arithmetic Operators</h3>
-					<p>Just like in math class, we can have arithmetic operators in programming:</p>
-					<pre><code class='csharp'>+, -, *, /</code></pre>
-					<p>Add, subtract, multiply and divide</p>
-				</section>
-				<section>
-					<aside class='notes'>
-						System.out.println("Hello, World!");<br>
-						int numberPassengers;<br>
-						int maxNumberPassengers=2;<br>
-						boolean isFull=false;<br>
-						numberPassengers=1;<br>
-						<strong>maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!</strong><br>
-					</aside>
-					<h3>Code It!</h3>
-					<pre><code class='csharp'>
-maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						System.out.println("Hello, World!");<br>
-						int numberPassengers;<br>
-						int maxNumberPassengers=2;<br>
-						boolean isFull=false;<br>
-						numberPassengers=1;<br>
-						maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!<br>
-						<strong>numberPassengers=numberPassengers+1;<br>
-							System.out.println("Number of Passengers: " + numberPassengers);</strong><br>
-					</aside>
-					<h3>Code it!</h3>
-					<p class='individually'>On your own: </p>
-					<ul>
-						<li>Increment the numberPassengers value by one</li>
-						<li>Then use the System.out.println method to show the result:
-							<pre><code class='csharp'>
-System.out.println("Number of Passengers: " + numberPassengers);
-							</code></pre>
-						</li>
-					</ul>
-				</section>
-				<section>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-numberPassengers = numberPassengers + 1;
-System.out.println("Number of Passengers: " + numberPassengers);
-</code></pre>
-					<p>You can write this in shorthand using the ++ operator: </p>
-					<pre><code class='csharp'>
-numberPassengers++;
-					</code></pre>
-					<p>Output: </p>
-					<pre><code class='no-highlight'>
-Hello World
-Number of Passengers: 2
-					</code></pre>
-				</section>
-			</section>
-			<section>
-				<section>
-					<aside class='notes'>
-						int currentSpeed = 0;<br>
-						currentSpeed = currentSpeed + 20;<br>
-						System.out.println("Current Speed: "+currentSpeed);<br>
-						currentSpeed = currentSpeed/2;<br>
-						System.out.println("Current Speed: "+currentSpeed);<br>
-						currentSpeed = currentSpeed *3;<br>
-						System.out.println("Current Speed: "+currentSpeed);<br>
-					</aside>
-					<h3>Code It: Playing with Arithmetic Operators</h3>
-					<p><span class='individually'>On your own:</span></p>
-					<ol>
-						<li>Create an integer called 'currentSpeed'</li>
-						<li>Initialize it with the value 0</li>
-						<li>Increase the value by 20 mph</li>
-						<li>Print the new current speed</li>
-						<li>Now reduce your speed in half</li>
-						<li>Print the new current speed</li>
-						<li>Increase your speed times three</li>
-						<li>Print the new current speed</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Expected Output: </h3>
-					<pre><code class='no-highlight'>
-Hello World
-Number of Passengers: 2
-Current Speed: 20
-Current Speed: 10
-Current Speed: 30
-					</code></pre>
-				</section>
-				<section>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-int currentSpeed = 0;
-currentSpeed = currentSpeed + 20;
-System.out.println("Current Speed: "+currentSpeed);
-currentSpeed = currentSpeed / 2;
-System.out.println("Current Speed: "+currentSpeed);
-currentSpeed = currentSpeed * 3;
-System.out.println("Current Speed: "+currentSpeed);
-					</code></pre>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h3>Equality and Relationship Operators</h3>
-					<p>These operatorse evaluate to true or false</p>
-					<table>
-						<tr>
-							<td>==</td><td>Equal</td>
-						</tr>
-						<tr>
-							<td>!=</td><td>Not Equal</td>
-						</tr>
-						<tr>
-							<td>&lt;</td><td>Less than</td>
-						</tr>
-						<tr>
-							<td>></td><td>Greater than</td>
-						</tr>
-						<tr>
-							<td>&lt;=</td><td>Less than or Equal to</td>
-						</tr>
-						<tr>
-							<td>>=</td><td>Greater than or Equal to</td>
-						</tr>
-					</table>
-				</section>
-				<section>
-					<h3>Code it!</h3>
-					<pre><code class='csharp'>
-isFull = (numberPassengers == maxNumberPassengers);
-System.out.println("The car is Full: " + isFull);
-					</code></pre>
-					<p>Output:</p>
-					<pre><code class='no-highlight'>
-The car is full: false
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						Example:<br>
-						isFull = numberPassengers &lt; maxNumberPassengers;<br>
-						System.out.println("We have less than the number of Max Passengers: "+isFull);<br>
-						boolean noMore = numberPassengers >= maxNumberPassengers;<br>
-						System.out.println("I'm full and/or overbooked! "+noMore);<br>
 
-						We have less than the number of Max Passengers: true<br>
-						I'm full and/or overbooked! false<br>
-					</aside>
-					<h3>Code It - <span class='individually'>Individually</span></h3>
-					<ol>
-						<li>In a boolean "hasSpace," assign the resulting value of the question "numberPassengers is less than maxNumberPassengers?"</li>
-						<li>Print the result</li>
-						<li>Test if the numberPassengers is greater than or equal to maxNumberPassengers and store it in isFull</li>
-						<li>Print the result</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Example Answer</h3>
-					<pre><code class='csharp'>
-isFull = numberPassengers &lt; maxNumberPassengers;
-System.out.println("We have less than the number of Max Passengers: "
-	+ isFull);
-boolean noMore = numberPassengers > maxNumberPassengers;
-System.out.println("I'm full and/or overbooked! " + noMore);
-					</code></pre>
-					<p>Output:</p>
-					<pre><code class='no-highlight'>
-We have less thatn the number of Max Passengers: true
-I'm full and/or overbooked! false
-					</code></pre>
+			<!-- Statically types variables -->
+			<section>
+				<h3>Statically Typed Variables Illustrated</h3>
+				<p>You can think of variables as boxes that hold a value</p>
+				<p>In statically typed languages, variables only hold the type of value they were 
+					declared to: </p>
+				<img src="images/variables_illustrated.png">
+			</section>
+
+			<!-- Operators overview -->
+			<section>
+				<h3>Operators</h3>
+				<ul>
+					<li>Assignment</li>
+					<li>Arithmetic</li>
+					<li>Equality and Relationship</li>
+					<li>Conditional</li>
+					<li>Precedence</li>
+				</ul>
+			</section>
+
+			<!-- Assignment operators -->
+			<section>
+				<h3>Assignment Operators</h3>
+				<p>To assign a value to a variable we use the assignment operator: </p>
+				<pre><code class='java'>=</code></pre>
+				<p>Let's try it out: </p>
+				<pre><code class='java'>numberOfPizzas = 1;</code></pre>
+			</section>
+
+			<!-- Variable initialization -->
+			<section>
+				<h3>Variable Initialization</h3>
+				<p>We just <em>initialized</em> <code>numberOfPizzas</code></p>
+				<p>Initilization is the first (initial) assignment of a value to a variable</p>
+				<p>You should always initialize your variables before using them in your program</p>
+				<p>You can initialize your variables when you declare them: </p>
+				<pre><code class='java'>int maxNumberPizzas = 2</code></pre>
+			</section>
+
+			<!-- Variable initialization: Develop it -->
+			<section>
+				<h3>Develop it!</h3>
+				<p><code>bool</code> variables can have one of two possible values:</p>
+				<ul>
+					<li>true</li>
+					<li>false</li>
+				</ul>
+				<p><span class='individually'>On your own,</span> initialize the variable 
+					<code>isOrderFull</code> with the value <code>false</code></p>
+			</section>
+
+			<!-- Variable initialization: Solution -->
+			<section>
+				<h3>The Code:</h3>
+				<pre><code class='java'>
+static void Main(string[] args)
+{
+	Console.WriteLine("Hello World!");
+	int numberOfPizzas;
+	int maxNumberOfPizzas = 2;
+	bool isOrderFull = false;
+	numberOfPizzas = 1;
+}
+				</code></pre>
+			</section>
+
+			<!-- Arithmetic Operators -->
+			<section>
+				<h3>Arithmetic Operators</h3>
+				<p>We can have arithmetic operators in programming that are much like what we learned in 
+					math class:</p>
+				<pre><code class='java'>+, -, *, /</code></pre>
+				<p>Add, subtract, multiply and divide</p>
+			</section>
+
+			<!-- Arithmetic Operators: Develop it -->
+			<section>
+				<h3>Develop It!</h3>
+				<pre><code class='java'>
+maxNumberOfPizzas = maxNumberOfPizzas + 3;
+//we've increased our delivery capacity!
+				</code></pre>
+			</section>
+
+			<!-- Arithmetic Operators: Develop it -->
+			<section>
+				<h3>Develop it!</h3>
+				<p class='individually'>On your own: </p>
+				<ul>
+					<li>Increment the <code>numberOfPizzas</code> value by one</li>
+					<li>Then use the <code>Console.WriteLine()</code> method to show the result:
+						<pre><code class='java'>
+Console.WriteLine("Number of Pizzas: " + numberOfPizzas);
+						</code></pre>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Arithmetic Operators: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+numberOfPizzas = numberOfPizzas + 3;
+Console.WriteLine("Number of Pizzas: " + numberOfPizzas);
+				</code></pre>
+				<p>You can write this in shorthand using the ++ operator: </p>
+				<pre><code class='java'>
+numberOfPizzas++;
+				</code></pre>
+				<p>Output: </p>
+				<pre><code class='no-highlight'>
+Hello World
+Number of Pizzas: 2
+				</code></pre>
+			</section>
+
+			<!-- Arithmetic Operators: Develop it -->
+			<section>
+				<h3>Develop It: Playing with Arithmetic Operators</h3>
+				<p><span class='individually'>On your own:</span></p>
+				<ol>
+					<li>Create an integer called <code>orderCost</code></li>
+					<li>Initialize it with the value 0</li>
+					<li>Increase the value by 13</li>
+					<li>Print the new order cost</li>
+					<li>Now reduce the order cost by half</li>
+					<li>Print the new order cost</li>
+				</ol>
+			</section>
+
+			<!-- Arithmetic Operators: Expected output -->
+			<section>
+				<h3>Expected Output: </h3>
+				<pre><code class='no-highlight'>
+Hello World!
+Number of Pizzas: 2
+Cost of the order is: 13
+Cost of the order is: 6
+				</code></pre>
+				<p>But <em>is</em> this what we would expect?</p>
+				<p>Try changing the <em>type</em> of orderCost to <code>double</code></p>
+				<p>What happens when we run the solution now?</p>
+			</section>
+
+			<!-- Arithmetic Operators: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+double orderCost = 0;
+orderCost = orderCost + 13;
+Console.WriteLine("Cost of the order is: " + orderCost);
+orderCost = orderCost / 2;
+Console.WriteLine("Cost of the order is: " + orderCost);
+				</code></pre>
+			</section>
+
+			<!-- Equality and relationship operators -->
+			<section>
+				<h3>Equality and Relationship Operators</h3>
+				<p>These operators evaluate to <code>true</code> or <code>false:</code></p>
+				<table>
+					<tr>
+						<td><code>==</code></td><td>Equal</td>
+					</tr>
+					<tr>
+						<td><code>!=</code></td><td>Not Equal</td>
+					</tr>
+					<tr>
+						<td><code>&lt;</code></td><td>Less than</td>
+					</tr>
+					<tr>
+						<td><code>></code></td><td>Greater than</td>
+					</tr>
+					<tr>
+						<td><code>&lt;=</code></td><td>Less than or Equal to</td>
+					</tr>
+					<tr>
+						<td><code>>=</code></td><td>Greater than or Equal to</td>
+					</tr>
+				</table>
+			</section>
+
+			<!-- Equality and relationship operators: Develop it -->
+			<section>
+				<h3>Develop it!</h3>
+				<pre><code class='java'>
+isOrderFull = (numberOfPizzas == maxNumberOfPizzas);
+Console.WriteLine("The order is full: " + isOrderFull);
+				</code></pre>
+				<p>Output:</p>
+				<pre><code class='no-highlight'>
+The order is full: false
+				</code></pre>
+			</section>
+
+			<!-- Equality and relationship operators: Develop it -->
+			<section>
+				<h3>Develop It - <span class='individually'>Individually</span></h3>
+				<ol>
+					<li>In a boolean <code>hasSpace</code>, assign the resulting value of the question 
+						"Is our number of pizzas less than our max number of pizzas?"</li>
+					<li>Print the result</li>
+					<li>Test if the <code>numberOfPizzas</code> is greater than or equal to 
+						<code>maxNumberOfPizzas</code> and store it in <code>isOrderFull</code></li>
+					<li>Print the result</li>
+				</ol>
+			</section>
+
+			<!-- Equality and relationship operators: Solution -->
+			<section>
+				<h3>Example Answer</h3>
+				<pre><code class='java'>
+hasSpace = numberOfPizzas &lt; maxNumberOfPizzas;
+Console.Write("We have less than the number of max pizzas: " + hasSpace);
+bool isOrderFull = numberOfPizzas > maxNumberOfPizzas;
+Console.Write("I'm full! " + isOrderFull);
+				</code></pre>
+				<p>Output:</p>
+				<pre><code class='no-highlight'>
+We have less than the number of max pizzas: True
+I'm full! False
+				</code></pre>
+			</section>
+		
+			<!-- Conditional operators -->
+			<section>
+				<h3>Conditional Operators</h3>
+				<table>
+					<tr>
+						<td>&amp;&amp;</td><td>And (short-circuit)</td>
+					</tr>
+					<tr>
+						<td>&amp;</td><td>And</td>
+					</tr>
+					<tr>
+						<td>||</td><td>Or (short-circuit)</td>
+					</tr>
+					<tr>
+						<td>|</td><td>Or</td>
+					</tr>
+				</table>
+				<p>We can check if two values are true</p>
+				<pre><code class='java'>
+bool isEmptyOrder = orderCost &lt;= 0 &amp;&amp; numberOfPizzas &lt;= 0;
+				</code></pre>
+			</section>
+
+			<!-- Conditional operators: Develop it -->
+			<section>
+				<h3>Develop It!</h3>
+				<p>Create a <code>bool</code> called <code>isLargeOrder</code> that evaluates to 
+					<code>true</code> if the order is full or if the order cost is greater than 
+					or equal to $50.</code></p>
+			</section>
+
+			<!-- Conditional operators: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+bool isLargeOrder = isOrderFull || orderCost >= 50;
+Console.WriteLine("Alert! Large order incoming: " + isLargeOrder);
+				</code></pre>
+			</section>
+
+			<!-- Precedence -->
+			<section>
+				<h3>Precedence</h3>
+				<p>Remember PEMDAS in math class? We have to keep in mind that multiplication and division 
+					happen before addition and subtraction. All operators have an order of precedence. 
+					Check out the
+				<a href="https://docs.microsoft.com/en-us/dotnet/java/language-reference/operators/" 
+				target="_blank">Official Documentation</a></p>
+			</section>
+
+			<!-- Precedence -->
+			<section>
+				<h3>Precedence</h3>
+				<p>Our previous example: </p>
+				<pre><code class='java'>bool isEmptyOrder = orderCost &lt;= 0 &amp;&amp; numberOfPizzas 
+					&lt;= 0</code></pre>
+				<p>According to the precedence chart evaluates:</p>
+				<table>
+					<tr>
+						<td><code>orderCost &lt;= 0,</br> numberOfPizzas &lt;= 0</code></td>
+						<td>relational</td>
+					</tr>
+					<tr>
+						<td><code>&amp;&amp;</code></td><td>logical and</td>
+					</tr>
+					<tr>
+						<td><code>=</code></td><td>assignment</td>
+					</tr>
+				</table>
 				</section>
 			</section>
-			<section>
-				<section>
-					<aside class='notes'>
-						So evaluate x>0 <br>
-						now evaluate y> 0<br>
-						now evaluate if both of those things were true
-					</aside>
-					<h3>Conditional Operators</h3>
-					<table>
-						<tr>
-							<td>&amp;&amp;</td><td>And</td>
-						</tr>
-						<tr>
-							<td>||</td><td>Or</td>
-						</tr>
-					</table>
-					<p>We can check if two (x and y) values are true</p>
-					<pre><code class='csharp'>
-positiveNumbers = x>0 &amp;&amp; y>0;
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						I'm only endangering myself false<br>
-						Mention Short Circuiting? If class is doing well with concepts.
-					</aside>
-					<h3>Code It!</h3>
-					<pre><code class='csharp'>
-boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
-System.out.println("I'm only endangering myself " + dangerToSelfOnly);
-					</code></pre>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h3>Precedence</h3>
-					<p>Just like in math class where you multiply and divide before you add and subtract all our operators have an order of precedence.  Check out the
-					<a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html" target="_blank">Official Documentation</a></p>
-				</section>
-				<section>
-					<h3>Precedence</h3>
-					<p>Our previous example: </p>
-					<pre><code class='csharp'>positiveNumbers = x>0 &amp;&amp; y>0;</code></pre>
-					<p>According to the precedence chart evaluates:</p>
-					<table>
-						<tr>
-							<td>x>0, y>0</td><td>relational</td>
-						</tr>
-						<tr>
-							<td>&amp;&amp;</td><td>logical and</td>
-						</tr>
-						<tr>
-							<td>=</td><td>assignment</td>
-						</tr>
-					</table>
-					</section>
-				</section>
+
+			<!-- Expressions -->
 			<section>
 				<h3>Expressions</h3>
 				<p>An expression is a piece of code that evaluates to a value.</p>
 				<p>Example:</p>
-				<pre><code class='csharp'>
-numberPassengers &lt; maxNumberPassengers
+				<pre><code class='java'>
+numberOfPizzas &lt; maxNumberOfPizzas
 				</code></pre>
-				<p>This expression could be true or false depending on the values of the varaibles, but it is not a complete statement of execution</p>
+				<p>This expression could be <code>true</code> or <code>false</code> depending on the values 
+					of the variables, but it is not a complete statement of execution</p>
 			</section>
+
+			<!-- Statement -->
 			<section>
-				<aside class='notes'>
-					There is no semi-colon and the expression on the previous page returns a value but nothing happens.
-				</aside>
 				<h3>Statement</h3>
-				<p>A statement is a complete unit of execution.  It's a sentence in the C# Language.  An instruction that can be carried out from start to end.</p>
+				<p>A statement is a complete unit of execution. It's a sentence in the C# Language. An 
+					instruction that can be carried out from start to end.</p>
 				<p>Let's take a look at one of the statements we've written:</p>
-				<pre><code class='csharp'>
-boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
+				<pre><code class='java'>
+bool isEmptyOrder = orderCost &lt;= 0 &amp;&amp; numberOfPizzas &lt;= 0;
 				</code></pre>
 			</section>
+
+			<!-- Checkpoint -->
 			<section>
 				<h3>Checkpoint</h3>
-				<p>Reviewing Variabels &amp; Operators</p>
+				<p>Reviewing Variables &amp; Operators</p>
 			</section>
+
+			<!-- Flow Control -->
 			<section>
 				<h3>Flow Control</h3>
 				<p>In our example program, each statement is executed one after another.</p>
 				<p>What if we wanted to make a choice about whether or not a statement was executed?</p>
-				<p>If the number of passengers is less than the max allowed, offer a ride home else apologize?</p>
+				<p>If the number of pizzas is less than the max allowed, tell a customer they can add a 
+					pizza to their order. Otherwise, tell them they've reached their max.</p>
 			</section>
+
+			<!-- Conditional -->
 			<section>
-				<section>
-					<h3>If/Else</h3>
-					<p>The If/Else statement allows us to make a choice</p>
-					<pre><code class='csharp'>
-if (x &lt; 5) {
-	System.out.println("Yay!");
+				<h3>Conditional If/Else</h3>
+				<p>The If/Else statement used with an expression that evaluates to a bool, allows us to 
+					make choices</p>
+				<pre><code class='java'>
+if (orderCost == 0) {
+	Console.Write("Customer has not yet ordered");
 } else {
-	System.out.println("Boo!");
+	Console.Write("Customer has placed an order!");
 }
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						if(numberPassengers < maxNumberPassengers) {<br>
-						System.out.println("Would you like a lift?");<br>
-						}<br>
-						else {<br>
-						System.out.println("Sorry, we're too full");<br>
-						}<br>
-						<br>
-						Expected output: <br>
-						Would you like a lift?
-					</aside>
-					<h3>Code it!</h3>
-					<p>If the number of passengers is less than the max number of passengers allowed, offer a ride</p>
-					<p>Otherwise, apologize</p>
-				</section>
-				<section>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-if (numberPassengers &lt; maxNumberPassengers) {
-	System.out.println("Would you like a lift?");
-} else {
-	System.out.println("Sorry, we're too full!");
-}
-					</code></pre>
-					<p>Output: </p>
-					<pre><code class='no-highlight'>
-Would you like a lift?
-					</code></pre>
-				</section>
+				</code></pre>
 			</section>
+
+			<!-- Conditional: Develop it -->
 			<section>
-				<section>
-					<aside class='notes'>
-						Highlight the order<br>
-						if goes at the top<br>
-						else if goes in the middle (as many as you want)<br>
-						Else goes at the bottom
-					</aside>
-					<h3>else if</h3>
-					<p>You also have an else if statement at your disposal:</p>
-					<pre><code class='csharp'>
-if (x &lt; 5) {
-	System.out.println("too small");
-} else if ( x == 5) {
-	System.out.println("Just right");
-} else {
-	System.out.println("too big!");
-}
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						if(numberPassengers &lt; maxNumberPassengers) {<br>
-						System.out.println("Would you like a lift?");<br>
-						}<br>
-						else if(numberPassengers == maxNumberPassengers-1){<br>
-						System.out.println("Room for one more!");<br>
-						}<br>
-						else {<br>
-						System.out.println("Sorry, we're too full");<br>
-						}
-					</aside>
-					<h3>Code it - <span class='individually'>Individually</span></h3>
-					<p>Add an else if statement to your current if/else block that prints out "We have room for one more" if the number of passengers is equal to the number of Max passengers minus 1.</p>
-				</section>
-				<section>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-if (numberPassengers &lt; maxNumberPassengers) {
-	System.out.println("Would you like a lift?");
-} else if (numberPassengers == maxNumberPassengers-1) {
-	System.out.println("We have room for one more!");
-} else {
-	System.out.println("Sorry, we're too full!");
-}
-					</code></pre>
-				</section>
+				<h3>Develop it!</h3>
+				<p>If the number of pizzas is less than the max number of pizzas allowed, tell the customer 
+					they can add a pizza to their order</p>
+				<p>Otherwise, tell them they've reached their max number of pizzas.</p>
 			</section>
+
+			<!-- Conditional: Solution -->
 			<section>
-				<section>
-					<h3>Switch Statement</h3>
-					<p>A switch statement evaluates the value of an integer or String and executes all the statements following the matching "case" block.</p>
-					<p>In other words, it evaluates the conditional once and starts execution from there until it is told to stop or hits the end of the block</p>
-				</section>
-				<section>
-					<h3>Switch Statement Example</h3>
-					<pre><code class='csharp'>
-switch (holiday) {
-	case "new years":
-		System.out.println("Happy New Year!");
+				<h3>The Code</h3>
+				<pre><code class='java'>
+if (numberOfPizzas &lt; maxNumberOfPizzas) {
+	Console.Write("You can add a pizza to your order!");
+} else {
+	Console.Write("You can't order any more pizza");
+}
+				</code></pre>
+				<p>Output: </p>
+				<pre><code class='no-highlight'>
+You can add a pizza to your order!
+				</code></pre>
+			</section>
+
+			<!-- Conditional Else if -->
+			<section>
+				<h3>Else if</h3>
+				<p>You also have an <code>else if</code> statement at your disposal:</p>
+				<pre><code class='java'>
+if (orderCost == 0) {
+	Console.Write("Customer has not yet ordered");
+} else if (orderCost >= 50) {
+	Console.Write("Alert! Large order incoming!");
+} else {
+	Console.Write("Customer has placed an order!");
+}
+				</code></pre>
+			</section>
+
+			<!-- Conditional Else if: Develop It -->
+			<section>
+				<h3>Develop it - <span class='individually'>Individually</span></h3>
+				<p>Add an <code>else if</code> statement to your current if/else block that prints out 
+					"You can order one more pizza" if the number of pizzas is equal to the number of 
+					max pizas minus 1.</p>
+			</section>
+
+			<!-- Conditional Else if: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+if (numberOfPizzas &lt; maxNumberOfPizzas) {
+	Console.Write("You can add a pizza to your order!");
+} else if (numberOfPizzas == maxNumberOfPizzas - 1) {
+	Console.Write("You can order one more pizza");
+} else {
+	Console.Write("You can't order any more pizza");
+}
+				</code></pre>
+			</section>
+
+			<!-- Switch statement -->
+			<section>
+				<h3>Switch Statement</h3>
+				<p>A switch statement evaluates the value of an integer or string and executes all 
+					the statements following the matching "case" block.</p>
+				<p>In other words, it evaluates the conditional once and starts execution from there 
+					until it is told to stop or hits the end of the block</p>
+				<pre><code class='java'>switch (deliveryTimeInHours) {
+	case 1:
+		Console.Write("Your pizza will arrive in 1 hour");
 		break;
-	case "fourth of july":
-		System.out.println("Happy Independence Day");
+	case 2:
+		Console.Write("We're busy! Your pizza will arrive 2 hours");
 		break;
 	default:
-		System.out.println("Happy Holidays!");
-}
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						switch(numberPassengers){<br>
-						case 1: System.out.println("I love driving by myself");<br>
-						case 2: System.out.println("They always call shotgun");<br>
-						case 3: System.out.println("third wheel");<br>
-						case 4: System.out.println("Full house!");<br>
-						default: System.out.println("over the top");<br>
-						}<br>
-						<br>
-						<strong>Expected output:</strong><br> 
-						they always call shotgun<br>
-						third wheel<br>
-						Fullhouse!<br>
-						Over the Top
-					</aside>
-					<h3>Code It!</h3>
-					<p>Let's create a switch statement based on the numberPassengers variable</p>
-					<p>Print the following sayings for the corresponding value: </p>
-					<ol>
-						<li>I love driving by myself</li>
-						<li>They always call shotgun</li>
-						<li>Third Wheel</li>
-						<li>Full House </li>
-					</ol>
-					<p>Default :Over the top!</p>
-				</section>
-				<section>
-					<aside class='notes'>
-						In our case numberPassengers is 2<br>
-						so everthing (including) after "They always call shotgun" prints
-					</aside>
-					<h3>Wait a Minute! Take a break</h3>
-					<p>Without any break statements the switch blocks "falls through" and executes everything after the matching value too!</p>
-				</section>
-				<section>
-					<h3>Code it!</h3>
-					<p><span class='individually'>On your own,</span> add a break statement to all of the cases</p>
-					<p>Example:</p>
-					<pre><code class='csharp'>
-case 1: System.out.println("I love driving by myself");
-	break;
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						switch(numberPassengers){<br>
-						case 1: System.out.println("I love driving by myself");<br>
-						break;<br>
-						case 2: System.out.println("They always call shotgun");<br>
-						break;<br>
-						case 3: System.out.println("third wheel");<br>
-						break;<br>
-						case 4: System.out.println("Full house!");<br>
-						break;<br>
-						default: System.out.println("over the top");<br>
-						}<br>
-						<br>
-						The default block is at the bottom of the switch block<br>
-						it cannot fall through
-					</aside>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-switch (numberPassengers) {
+		Console.Write("Delivery time unknown");
+		break;
+}</code></pre>
+			</section>
+
+			<!-- Switch statement: Develop it -->
+			<section>
+				<h3>Develop It!</h3>
+				<p>Let's create a <code>switch</code> statement based on the <code>numberOfPizzas</code> variable</p>
+				<p>Print the following sayings for the corresponding value: </p>
+				<ol start="0">
+					<li>You haven't added a pizza to your order</li>
+					<li>Dinner for one?</li>
+					<li>Having a couple of guests over?</li>
+					<li>You've reached the pizza limit!</li>
+				</ol>
+				<p>Default: Pizza time!</p>
+			</section>
+
+			<!-- Switch statement: Breaks -->
+			<section>
+				<h3>Wait a Minute! Take a break</h3>
+				<p>Without any <code>break</code> statements, the <code>switch</code> blocks "falls through" and 
+					executes everything after the matching value too!</p>
+			</section>
+			
+			<!-- Switch statement: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+switch (numberOfPizzas) {
+	case 0: 
+		Console.Write("You haven't added a pizza to your order");
+		break;
 	case 1: 
-		System.out.println("I love driving by myself");
+		Console.Write("Dinner for one?");
 		break;
-	case 2: 
-		System.out.println("They always call shotgun");
+	case 2:
+		Console.Write("Having a couple of guests over?");
 		break;
-	case 3:
-		System.out.println("Third Wheel");
-		break;
-	case 4:
-		System.out.println("Full House");
+	case maxNumberOfPizzas:
+		Console.Write("You've reached the pizza limit!");
 		break;
 	default:
-		System.out.println("Over the top!");
+		Console.Write("Pizza time!");
+		break;
 }
-					</code></pre>
-					<p>Why isn't there a break statement on the default block?</p>
-				</section>
+				</code></pre>
 			</section>
+
+			<!-- Loops -->
 			<section>
 				<h3>Loops</h3>
 				<p>With loops, we can write code once and have it executed multiple times in a row.</p>
 			</section>
+
+			<!-- For loops -->
 			<section>
-				<section>
-					<h3>For Loop</h3>
-					<p>In cases where we know how many times we wish to execute the loop, we can use a <em>for loop</em></p>
-					<p>The for loop structure calls for a variable initialized to a value, the termination condition, and the increment</p>
-					<pre><code class='csharp'>
+				<h3>For Loop</h3>
+				<p>In cases where we know how many times we wish to execute the loop, we can use a 
+					<code>for</code> loop</p>
+				<p>The <code>for</code> loop structure calls for a variable initialized to a value, the 
+					termination condition, and the increment</p>
+				<pre><code class='java'>
 for (initial variable; test condition; increment) { }
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						for(int mySpeed=0; mySpeed<55; mySpeed+=10){<br>
-							System.out.println("I'm going "+mySpeed+" mph!");<br>
-						}
-					</aside>
-					<h3>Code it!</h3>
-					<pre><code class='csharp'>
-for (int mySpeed = 0; mySpeed &lt; 55; mySpeed +=10) {
-	System.out.println("I'm going " + mySpeed + "mph!");
-}
-					</code></pre>
-				</section>
-				<section>
-					<h3>Output</h3>
-					<pre><code class='no-highlight'>
-I'm going 0 mph!
-I'm going 10 mph!
-I'm going 20 mph!
-I'm going 30 mph!
-I'm going 40 mph!
-I'm going 50 mph!
-					</code></pre>
-				</section>
+				</code></pre>
 			</section>
+
+			<!-- For loops: Develop it-->
 			<section>
-				<section>
-					<h3>While Loop</h3>
-					<p>At other times, we want to execute oru code for an unknown number of iterations</p>
-					<p>It simply needs to be executed until some condition is true regardless of how many iterations it takes.</p>
-					<pre><code class='csharp'>
-while (condition) {
-	...
+				<h3>Develop it!</h3>
+				<pre><code class='java'>
+for (int orderCost = 0; orderCost &lt; 50; orderCost +=10) {
+	Console.Write("My order costs $" + orderCost + "!");
 }
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						isFull = numberPassengers == maxNumberPassengers;<br>
-						while(hasSpace){<br>
-						numberPassengers++;<br>
-						System.out.println("I'm Carrying: "+numberPassengers);<br>
-						hasSpace = numberPassengers &lt; maxNumberPassengers;<br>
-						}<br>
-						<br>
-						<strong>Output:</strong> <br>
-						I'm Carrying: 3<br>
-						I'm Carrying: 4<br>
-						I'm Carrying: 5
-					</aside>
-					<h3>Code It!</h3>
-					<p>While hasSpace is true, add a passengers then update the value of hasSpace</p>
-				</section>
-				<section>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-isFull = numberPassengers == maxNumberPassengers;
-while (!isFull) {
-	/* We'll add a passenger */
-	numberPassengers ++;
-	/* We'll notifying people how many passengers we have */
-	System.out.println("I'm carrying: " + numberPassengers);
-	/* We'll update whether or not we're full */
-	isFull = numberPassengers == maxNumberPassengers; 
-}
-					</code></pre>
-				</section>
+				</code></pre>
 			</section>
+
+			<!-- For loops: Solution -->
+			<section>
+				<h3>Output</h3>
+				<pre><code class='no-highlight'>
+My order costs $0!
+My order costs $10!
+My order costs $20!
+My order costs $30!
+My order costs $40!
+				</code></pre>
+			</section>
+
+			<!-- While loops -->
+			<section>
+				<h3>While Loop</h3>
+				<p>At other times, we want to execute our code for an unknown number of iterations.
+					We want to execute it <em>while</em> an expression is true regardless of how many 
+					iterations it takes.</p>
+				<pre><code class='java'>
+while (condition) {
+...
+}
+				</code></pre>
+			</section>
+
+			<!-- While loops: Develop it -->
+			<section>
+				<h3>Develop It!</h3>
+				<p>While <code>isOrderFull</code> is true, add a pizza, then update the value of 
+					<code>isOrderFull</code></p>
+			</section>
+
+			<!-- While loops: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+isOrderFull = numberOfPizzas == maxNumberOfPizzas;
+Console.Write("Our max number of pizzas is " + maxNumberOfPizzas);
+while (!isOrderFull) {
+	/* We'll add a pizza */
+	numberOfPizzas ++;
+	/* We'll alert how many pizzas we have */
+	Console.Write("I'm carrying: " + numberOfPizzas);
+	/* We'll update whether or not we're full */
+	isOrderFull = numberOfPizzas == maxNumberOfPizzas; 
+}
+				</code></pre>
+			</section>
+
+			<!-- Checkpoint -->
 			<section>
 				<h3>Checkpoint!</h3>
 				<p>Flow Control Constructs</p>
 			</section>
+
+			<!-- Intro to Objects -->
 			<section>
-				<section>
-					<h3>Part 2: Introduction to Objects</h3>
-					<p>All real-world obejcts have a <em>state</em> and a <em>behavior</em></p>
-					<p>We'll use this approach to looking at objects to describe objects in our programming</p>
-				</section>
-				<section>
-					<h3>Describing Objects in this room</h3>
-					<p>Let's take a minute to identify objects in this room and talk about them by identifying their state and behavior</p>
-				</section>
+				<h3>Part 2: Introduction to Objects</h3>
+				<p>All real-world obejcts have a <em>state</em> and a <em>behavior</em></p>
+				<p>We'll use this approach to looking at objects to describe objects in our programming</p>
+				</br>
+				<h3>Describing Objects in this room</h3>
+				<p>Let's take a minute to identify objects in this room and talk about them by identifying their state and behavior</p>
 			</section>
+
+			<!-- Array Objects -->
 			<section>
-				<section>
-					<h3>Array Objects</h3>
-					<ul>
-						<li>Arrays are containers for values.</li>
-						<li>Arrays hold a single type of value.</li>
-						<li>Arrays are a fixed length.</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Real World Array</h3>
-					<ul>
-						<li>7-day pill box - every slot holds a pill</li>
-					</ul>
-				</section>
-				<section>
-					<h3>Syntax - Creating an Array</h3>
-					<pre><code class='csharp'>
-String[] garage = new String[3];
-garage[0] = "Chevy";
-garage[1] = "Ford";
-garage[2] = "Pontiac";
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						It's size/length is 3<br>
-						It's currently holding Chevy, Ford and Pontiac 
-					</aside>
-					<h3>Array - States</h3>
-					<p>The state of an array can be described by: </p>
-					<ul>
-						<li>How big it is or how many values it can hold (also called its length)</li>
-						<li>The values it currently holds</li>
-					</ul>
-					<p>**Describe our Array in these terms</p>
-				</section>
-				<section>
-					<aside class='notes'>
-						Highlight  Making use of .length state/property
-					</aside>
-					<h3>Arrays and For loops are BFFs</h3>
-					<pre><code class='csharp'>
-for (int i=0; i&lt;garage.length; i++) {
-	System.out.println("Garage Slot " + i + "holds " + garage[i]);
-}
-					</code></pre>
-				</section>
+				<h3>Array Objects</h3>
+				<ul>
+					<li>Arrays are containers for values.</li>
+					<li>Arrays hold a single type of value.</li>
+					<li>Arrays are a fixed length.</li>
+				</ul>
+				</br>
+				<h3>Real World Array</h3>
+				<p>7-day pill box - every slot holds a pill</p>
 			</section>
+
+			<!-- Array syntax -->
 			<section>
-				<h3>String Object</h3>
-				<p>We created an Array of Strings</p>
-				<p><a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html">Strings</a> are a type of Object</p>
-				<p>We can create a single String object by declaring a variable of type String and assigning it a new String object with some value</p>
-				<pre><code class='csharp'>
-String dreamCar = new String("Corvette");
+				<h3>Syntax - Creating an Array</h3>
+				<pre><code class='java'>
+string[] consoles = new string[3];
+consoles[0] = "PS4";
+consoles[1] = "Xbox";
+consoles[2] = "Switch";
 				</code></pre>
 			</section>
+
+			<!-- Array states -->
 			<section>
-				<section>
-					<h3>Methods</h3>
-					<p>An object's behavior is defined in its methods.</p>
-					<p>A method is a block of code that will execute when called upon.</p>
-				</section>
-				<section>
-					<h3>String Methods (behaviors)</h3>
-					<p>Some common things String can do: </p>
-					<ul>
-						<li>A String can tell you its length</li>
-						<li>A String can tell you whether or not it contains a certain value</li>
-						<li>It can convert itself to lowercase or uppercase</li>
-					</ul>
-				</section>
-				<section>
-					<h3>An example in Code</h3>
-					<pre><code class='csharp'>
-String dreamCar = new String("Corvette");
-System.out.println("Length: " + dreamCar.length());
-System.out.println("Does the word contain 'vette'?" +
-	dreamCar.contains("vette"));
-System.out.println("It's all lower " + dreamCar.toLowerCase());
-					</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-						System.out.println("It's all upper " + dreamCar.toUpperCase());
-					</aside>
-					<h3 class='individually'>On your own</h3>
-					<p>Call and print the result of the "toUpperCase()" method</p>
-				</section>
-				<section>
-					<h3>The Code</h3>
-					<pre><code class='csharp'>
-System.out.println("It's all upper " + dreamCar.toUpperCase());
-					</code></pre>
-				</section>
+				<h3>Array - States</h3>
+				<p>The state of an array can be described by: </p>
+				<ul>
+					<li>How big it is or how many values it can hold (also called its length)</li>
+					<li>The values it currently holds</li>
+				</ul>
+				<p>**Describe our Array in these terms</p>
 			</section>
+
 			<section>
-				<section>
-					<h3>Methods Continued</h3>
-					<p>Methods have a return type and a parameters list</p>
-				</section>
-				<section>
-					<h3>Methods Return Type</h3>
-					<p>Return Type - If the method returns a value, what type is it?</p>
-					<p>Let's consider the <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html#length()" target="_blank">length() method</a> of a String</p>
-				</section>
-				<section>
-					<h3>Methods Parameters</h3>
-					<p>Parameters- A list of values the methods expects as input when you call on it</p>
-					<pre><code class='csharp'>
-.contains("vette");
-					</code></pre>
-				</section>
+				<h3>Arrays and For loops are BFFs</h3>
+				<pre><code class='java'>
+for (int i = 0; i &lt; consoles.Length; i++) {
+	Console.Write("Console " + i + " is " + consoles[i]);
+}
+				</code></pre>
 			</section>
+
+			<!-- Array states -->
 			<section>
-				<section>
-					<h3>Wrapper Classes</h3>
-					<p>For each of the primitive data types we've seen, there is a "wrapper class"</p>
-					<p>A wrapper class wraps the primitive in an object.</p>
-					<p>They have the same names as the primitive types.  They're full words and start witha  capital letter: Integer, Double, Boolean</p>
-				</section>
-				<section>
-					<h3>Wrapper Classes</h3>
-					<p>Reasons to use a number object vs a primitive:</p>
-					<ol>
-						<li>A method expects an object</li>
-						<li>Using a constant defined by the Number class</li>
-						<li>Use of the Number class methods (converting to/from types or Strings and between number systems)</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Let's create some Number Objects</h3>
-					<p>We can create a Double by passing it a primitive double value: </p>
-					<pre><code class='csharp'>
-Double mpg = new Double(30.5);
-					</code></pre>
-					<p>We can also create a Double by passing it a String: </p>
-					<pre><code class='csharp'>
-Double mpg = new Double("49.1");
-					</code></pre>
-				</section>
+				<h3>String Object</h3>
+				<p>We've created an array of strings</p>
+				<p><a href="https://docs.microsoft.com/en-us/dotnet/java/programming-guide/strings/">Strings</a> 
+					are a type of Object</p>
+				<p>We can create a single string object by declaring a variable of type <code>string</code> 
+					and assigning it a new <code>string</code> object with some value</p>
+				<pre><code class='java'>
+string newConsole = new string("Sega Genesis");
+				</code></pre>
 			</section>
+
+			<!-- Methods -->
 			<section>
-				<aside class='notes'>
-					Take a look at the constructor summary in the C# Docs
-				</aside>
+				<h3>Methods</h3>
+				<p>An object's behavior is defined in its methods.</p>
+				<p>A method is a block of code that will execute when called upon.</p>
+			</section>
+
+			<!-- String methods -->
+			<section>
+				<h3>String Methods</h3>
+				<p>Some common things that <code>string</code> can do: </p>
+				<ul>
+					<li>A <code>string</code> can tell you its length</li>
+					<li>A <code>string</code> can tell you whether or not it contains a certain value</li>
+					<li>It can convert itself to lowercase or uppercase</li>
+				</ul>
+			</section>
+
+			<!-- String methods: Example -->
+			<section>
+				<h3>An example in Code</h3>
+				<pre><code class='java'>
+string newConsole = new string("Sega Genesis");
+Console.Write("Length: " + newConsole.Length;
+Console.Write("Does the word contain 'genesis'?" +
+	newConsole.Contains("genesis"));
+Console.Write("It's all lower " + newConsole.ToLower());
+				</code></pre>
+			</section>
+
+			<!-- String methods: Develop it -->
+			<section>
+				<h3 class='individually'>On your own</h3>
+				<p>Call and print the result of the <code>ToUpper()</code> method</p>
+			</section>
+
+			<!-- String methods: Solution -->
+			<section>
+				<h3>The Code</h3>
+				<pre><code class='java'>
+Console.Write("It's all upper " + newConsole.ToUpper());
+				</code></pre>
+			</section>
+
+			<!-- Methods cont. -->
+			<section>
+				<h3>Methods Continued</h3>
+				<p>Methods have a return type and a set of parameters</p>
+			</section>
+
+			<!-- Methods return type -->
+			<section>
+				<h3>Method Return Types</h3>
+				<p>Return Type - If the method returns a value, what type is it?</p>
+				<p>Let's consider the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.contains" 
+					target="_blank">Contains()</a> method of a string</p>
+				<p>Let's consider the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.toupper" 
+					target="_blank">ToUpper()</a> method of a string</p>
+			</section>
+
+			<!-- Methods parameters -->
+			<section>
+				<h3>Method Parameters</h3>
+				<p>Parameters- A list of values the methods expects as input when you call on it</p>
+				<pre><code class='java'>
+.Contains("genesis");
+				</code></pre>
+			</section>
+
+			<!-- Constructors -->
+			<section>
 				<h3>Constructors</h3>
-				<p>When we create an objects, its data members have an initial value</p>
+				<p>When we create an object, its data members have an initial value</p>
 				<p>The initial state of the object is set by its constructor.</p>
 				<p>A constructor may take one or more parameters to be used when setting the initial values.</p>
-				<p>Check out <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html" target="_blank">Double</a>
 			</section>
+			
+			<!-- Constructors cont. -->
 			<section>
-				<h3>Double -> String &amp; String -> Double</h3>
-				<p>Doubles can be converted to a String with the <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#toString()" target="_blank">toString()</a> method.</p>
-				<p>Meanwhile, we can get a primitive double value by calling on <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#parseDouble(java.lang.String)" target="_blank">Double.parseDouble(double x);</a></p>
+				<h3><code>int</code> -> <code>string</code> &amp; <code>string</code> -> <code>int</code></h3>
+				<p><code>int</code> can be converted to a <code>string</code> with the 
+					<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.tostring" 
+					target="_blank">ToString()</a> method.</p>
+				<p>Meanwhile, we can get a primitive <code>int</code> value by calling on the
+					<a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse" 
+					target="_blank">Parse()</a> method.</p>
 			</section>
+
+			<!-- Null -->
 			<section>
 				<h3>Null</h3>
-				<p>A value that represents nothingness Null represents no value</p>
-				<p>If a boolean can be yes or no, a null value would signify "undecided"</p>
+				<p>A value that represents nothingness <code>null</code> represents no value</p>
+				<p>If a <code>bool</code> could be yes or no, a <code>null</code> value would signify "undecided"</p>
 			</section>
 		</div> <!-- end slides -->
 		<footer>
 			<span class='footer-title'>Intro to OOP with C#</span>
-			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+				<img alt="Creative Commons License" style="border-width:0" 
+				src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 		</footer>
 	</div> <!-- end reveal -->
 	<script src="reveal/lib/js/head.min.js"></script>
